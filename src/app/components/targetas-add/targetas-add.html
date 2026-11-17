@@ -1,0 +1,31 @@
+<h3> Agregar Usuario</h3>
+    <input
+         type="text" 
+         class="form-control" 
+         placeholder="Nombre" 
+         [value]="name()"
+         (change)="name.set(txtName.value)"
+         (input)="name.set(txtName.value)"
+         #txtName 
+         />
+
+    <input
+        type="text" 
+         class="form-control" 
+         placeholder="Correo"
+         [value]="correo()"
+         (change)="correo.set(txtCorreo.value)" 
+         (input)="correo.set(txtCorreo.value)"
+         #txtCorreo
+    />
+    <input
+        type="text" 
+         class="form-control" 
+         placeholder="Ciudad"
+         [value]="ciudad()"
+         (change)="ciudad.set(txtCiudad.value)" 
+         (input)="ciudad.set(txtCiudad.value)"
+         #txtCiudad
+    />
+
+    <button (click)="addUsuario()" class="mt-2 btn btn-primary">Agregar</button>
