@@ -1,0 +1,7 @@
+<h3>Buscar por nombre:</h3>
+<input
+    type="text"
+    [value]="service.search()"
+    (input)="service.buscar($any($event.target).value)"
+>
+<p>Favoritos: {{ service.favCount() }}</p>

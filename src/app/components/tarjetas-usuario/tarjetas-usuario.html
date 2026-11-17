@@ -1,0 +1,13 @@
+<article>
+  <h4>{{ user().name }}</h4>
+  <p>{{ user().correo }}</p>
+  <p>{{ user().ciudad }}</p>
+  <label>
+    <input
+      type="checkbox"
+      [checked]="user().isFav"
+      (change)="favToggled.emit(user().id)"
+    />
+    Favorito
+  </label>
+</article>

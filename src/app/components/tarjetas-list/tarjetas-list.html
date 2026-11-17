@@ -1,1 +1,9 @@
-<p>tarjetas-list works!</p>,
+<ul>
+    
+    @for (users of users(); track users.id; let idx = $index) {
+        <app-tarjeta-usuario
+        [user]="users"
+        (favToggled)="favToggled.emit($event)"
+        ></app-tarjeta-usuario>
+    }
+</ul>
